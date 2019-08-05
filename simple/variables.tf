@@ -95,7 +95,9 @@ variable "search_head_disk_size" {
   default = 500
 }
 
-variable "shc_pass" {}
+variable "shc_pass" {
+  default = "asdf4567"
+}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Network variables
