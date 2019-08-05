@@ -23,43 +23,79 @@ variable "ssh_private_key" {}
 # The defaults here will give you a cluster.  You can also modify these.
 # ---------------------------------------------------------------------------------------------------------------------
 
-variable "master" {
-  type = "map"
+# --------------------------
+# master instance variables
+# --------------------------
 
-  default = {
-    shape = "VM.Standard2.4"
-
-    # Number block volumes on master.
-    disk_count = 1
-    disk_size  = 500
-  }
+variable master_shape {
+  default = "VM.Standard2.4"
 }
 
-variable "indexer" {
-  type = "map"
-
-  default = {
-    shape = "VM.Standard2.4"
-    count = 3
-
-    # Number block volumes on each indexer.
-    disk_count = 1
-    disk_size  = 500
-  }
+variable master_disk_count {
+  default = 1
 }
 
-variable "search-head" {
-  type = "map"
-
-  default = {
-    shape = "VM.Standard2.4"
-    count = 4
-
-    # Number block volumes on each search head.
-    disk_count = 1
-    disk_size  = 500
-  }
+variable master_disk_size {
+  default = 500
 }
+
+variable password {
+  default = "foobar123!"
+}
+
+variable sites_string {
+  default = "site1,site2"
+}
+
+# --------------------------
+# indexer instance variables
+# --------------------------
+
+variable "indexer_shape" {
+  default = "VM.Standard2.4"
+}
+
+variable "indexer_disk_count" {
+  default = 1
+}
+
+variable "indexer_disk_size" {
+  default = 500
+}
+
+# ------------------------------
+# search deployer instance variables
+# ------------------------------
+
+variable "search_deployer_shape" {
+  default = "VM.Standard2.4"
+}
+
+variable "role_title" {
+  default = "search_head_deployer"
+}
+
+# ------------------------------
+# search head instance variables
+# ------------------------------
+
+variable "search_head_shape" {
+  default = "VM.Standard2.4"
+}
+
+variable "search_head_count" {
+  default = 2
+}
+
+variable "search_head_disk_count" {
+  default = 1
+}
+
+variable "search_head_disk_size" {
+  default = 500
+}
+
+variable "shc_pass" {}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Network variables

@@ -13,6 +13,3 @@ shape=$(echo $json | jq -r .shape)
 echo "$public_ip $private_ip $shape"
 
 echo $json | jq $CONFIG_LOCATION
-
-#diskCount used by disks.sh
-diskCount=$(echo $json | jq -r $CONFIG_LOCATION.disk_count)
