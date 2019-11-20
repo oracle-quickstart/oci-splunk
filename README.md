@@ -7,15 +7,15 @@ First off you'll need to do some pre deploy setup.  That's all detailed [here](h
 ## Clone the Module
 Now, you'll want a local copy of this repo by running:
 
-    git clone https://github.com/oracle/oci-quickstart-splunk.git
+    git clone https://github.com/oracle-quickstart/oci-splunk.git
 
 ## Deploy
 The TF templates here can be deployed by running the following commands:
 ```
-cd oci-quickstart-splunk/simple
+cd oci-splunk/simple
 terraform init
 terraform plan
-terraform apply # will prompt to continue
+terraform apply
 ```
 
 Using the defaults in `variables.tf` these templates will deploy:
