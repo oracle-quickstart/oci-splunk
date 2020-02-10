@@ -5,18 +5,30 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 # Required by the OCI Provider
-variable "tenancy_ocid" {}
+variable "tenancy_ocid" {
+}
 
-variable "compartment_ocid" {}
-variable "user_ocid" {}
-variable "fingerprint" {}
-variable "private_key_path" {}
-variable "region" {}
+variable "compartment_ocid" {
+}
+
+variable "user_ocid" {
+}
+
+variable "fingerprint" {
+}
+
+variable "private_key_path" {
+}
+
+variable "region" {
+}
 
 # Key used to SSH to OCI VMs
-variable "ssh_public_key" {}
+variable "ssh_public_key" {
+}
 
-variable "ssh_private_key" {}
+variable "ssh_private_key" {
+}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Optional variables
@@ -27,23 +39,23 @@ variable "ssh_private_key" {}
 # master instance variables
 # --------------------------
 
-variable master_shape {
+variable "master_shape" {
   default = "VM.Standard2.4"
 }
 
-variable master_disk_count {
+variable "master_disk_count" {
   default = 1
 }
 
-variable master_disk_size {
+variable "master_disk_size" {
   default = 500
 }
 
-variable password {
+variable "password" {
   default = "foobar123!"
 }
 
-variable sites_string {
+variable "sites_string" {
   default = "site1,site2"
 }
 
@@ -126,7 +138,7 @@ variable "vcn_cidr" {
 # Oracle-Linux-7.6-2019.05.28-0
 
 variable "images" {
-  type = "map"
+  type = map(string)
 
   default = {
     ap-seoul-1     = "ocid1.image.oc1.ap-seoul-1.aaaaaaaa6mmih5n72yviujadzfkzthjwyc3h5uvaeejc3kpalhyakk6tfejq"
@@ -138,3 +150,4 @@ variable "images" {
     us-phoenix-1   = "ocid1.image.oc1.phx.aaaaaaaa2wadtmv6j6zboncfobau7fracahvweue6dqipmcd5yj6s54f3wpq"
   }
 }
+
