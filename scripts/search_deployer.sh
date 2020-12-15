@@ -9,10 +9,10 @@ count=$(echo $json | jq -r $CONFIG_LOCATION.count)
 master_public_ip=$(echo $json | jq -r $CONFIG_LOCATION.master_public_ip)
 role_title=$(echo $json | jq -r $CONFIG_LOCATION.role_title)
 
-file="splunk-7.3.1-bd63e13aa157-linux-2.6-x86_64.rpm"
-version="7.3.1"
+file="splunk-8.1.1-08187535c166-linux-2.6-x86_64.rpm"
+version="8.1.1"
 url="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=$version&product=splunk&filename=$file&wget=true"
-wget $url -O $file
+wget -O $file $url
 chmod 744 $file
 mkdir -p /opt/splunk
 rpm -i $file
