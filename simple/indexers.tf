@@ -3,7 +3,6 @@ resource "oci_core_instance" "indexer" {
   compartment_id      = var.compartment_ocid
   availability_domain = data.oci_identity_availability_domains.availability_domains.availability_domains[var.ad_number]["name"]
   shape               = var.indexer_shape
-  subnet_id           = oci_core_subnet.subnet.id
 
   source_details {
     source_id   = var.images[var.region]
@@ -45,4 +44,3 @@ resource "oci_core_instance" "indexer" {
 
   count = length(split(",", var.sites_string))
 }
-
