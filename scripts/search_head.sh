@@ -13,7 +13,7 @@ shc_pass=$(echo $json | jq -r $CONFIG_LOCATION.shc_pass)
 
 file="splunk-8.1.1-08187535c166-linux-2.6-x86_64.rpm"
 version="8.1.1"
-url="https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=$version&product=splunk&filename=$file&wget=true"
+url="https://download.splunk.com/products/splunk/releases/$version/linux/$file"
 wget -O $file $url
 chmod 744 $file
 mkdir -p /opt/splunk
