@@ -10,3 +10,29 @@
 
 # scratch work
 *scratch*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# ignore local csv files
+*.csv
+
+## Ignore vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
