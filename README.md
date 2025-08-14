@@ -57,3 +57,19 @@ Search head server public IPs = [
 The deployment will finish asynchronously after `terraform apply` returns. Once
 this completes you'll be able to log into the Splunk admin console by opening the
 `Master server URL` in a browser. The login is `admin/<password variable in variables.tf>`
+
+## Contributing
+
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+
+## Security
+
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
+
+## License
+
+Copyright (c) 2023 Oracle and/or its affiliates.
+
+Released under the Apache License version 2.0 as shown at
+<http://www.apache.org/licenses/>.
+
